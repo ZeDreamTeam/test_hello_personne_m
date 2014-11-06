@@ -4,7 +4,7 @@ package perso;
 public class Etudiant extends Personne{
     private int note;
 
-    public Etudiant(String nom, String prenom, int age) {
+    public Etudiant(String nom, String prenom, int age, int note) {
         super(nom,prenom,age);
         this.note =note;
     }
