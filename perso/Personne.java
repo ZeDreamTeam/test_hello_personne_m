@@ -23,5 +23,10 @@ public class Personne {
         return this.age;
     }
 
+    public String toString() {
+        return getNom() + " " + getPrenom() + " - " + getAge() + " years old";
+
+    }
+
 
 }

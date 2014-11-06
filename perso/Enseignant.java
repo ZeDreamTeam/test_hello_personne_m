@@ -16,4 +16,8 @@ public class Enseignant extends Personne {
         this.hours=hours;
     }
 
+    public String toString() {
+        return super.toString() + " - " + getHours() + " per week";
+    }
+
 }

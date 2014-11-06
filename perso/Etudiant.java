@@ -16,4 +16,8 @@ public class Etudiant extends Personne{
         this.note=note;
     }
 
+    public String toString() {
+        return super.toString() + " - " + getNote() + "/10";
+    }
+
 }
