@@ -2,17 +2,16 @@ package perso;
 
 import stuff.Publication;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by goubin on 07/11/14.
  */
-public class EnseignantChercheur extends Enseignant implements IChercheur {
-    private final List<Publication> publicationList;
-    public EnseignantChercheur(String nom, String prenom, int age, int hours) {
+public class EnseignantChercheurSet extends Enseignant implements IChercheur {
+    private final Set<Publication> publicationList;
+    public EnseignantChercheurSet(String nom, String prenom, int age, int hours) {
         super(nom, prenom, age, hours);
-        publicationList = new ArrayList<Publication>();
+        publicationList = new TreeSet<Publication>();
     }
 
     @Override
@@ -34,6 +33,6 @@ public class EnseignantChercheur extends Enseignant implements IChercheur {
 
     @Override
     public String toString() {
-        return "arraylist: " + super.toString() + " Publication: " + listerPublications() ;
+        return "set: " + super.toString() + " Publication: " + listerPublications() ;
     }
 }
