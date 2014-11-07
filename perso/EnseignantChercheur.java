@@ -26,9 +26,14 @@ public class EnseignantChercheur extends Enseignant implements IChercheur {
     public String listerPublications() {
         StringBuilder builder = new StringBuilder();
         for (Publication publication : publicationList) {
-            builder.append(publication.toString());
+            builder.append(publication.toString()).append(", ");
         }
-
+        if(builder.length()!=0) builder.setLength(builder.length()-2);
         return builder.toString();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Publication: " + listerPublications() ;
     }
 }
